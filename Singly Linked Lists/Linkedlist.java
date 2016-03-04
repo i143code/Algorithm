@@ -26,8 +26,21 @@ public class Linkedlist {
 		   header.Next=n;
 		   n.Next=temp;
 		   size++;	   
-		   
-	   }  
+		}  
    }
-	
+    //gives the size of linkedlist
+    public int getsize(){
+	   return size;
+    }
+   
+   //return all the data in the linkedlist
+    public String toString(){
+	 Node n = header.Next;
+	 String temp= "";
+	 while(n != null){
+		temp = temp  +n.data;
+		n= n.Next;	 
+	}
+	   return temp;	   
+	}	
 }
